@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title></title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/modules.css"/>
+</head>
+<body>
+    <div class="header">
+        <a href="#" class="backbtn">&nbsp;</a>
+        <h2>登录</h2>
+    </div>
+    <div class="container page login-con" data-tt="0">
+        <div class="box number line"><input type="tel" placeholder="输入手机号码" class="num-txt"/></div>
+        <div class="box pwd line"><input type="password" placeholder="输入密码" class="pwd-txt"/></div>
+        <div class="box btnbox"><input type="submit" value="登录" /></div>
+        <div class="box msg f-cb"><a href="#" class="f-fl">注册新账号</a> <a href="#" class="f-fr">忘记密码?</a></div>
+    </div>
+    <div class="container page reg-con" data-tt="1">
+        <div class="box number line"><input type="tel" placeholder="输入手机号码" class="num-txt"/></div>
+        <div class="box box2"><div class="line yzm"><input type="text" placeholder="输入验证码" class="yzm-txt"/></div><div class="btn"><input type="button" value="获取验证码" class="yzm-btn"/></div></div>
+        <div class="box btnbox"><input type="submit" value="下一步" /></div>
+    </div>
+    <div class="container page pwd-con" data-tt="2">
+        <div class="box pwd line"><input type="tel" placeholder="输入您的密码" class="num-txt"/></div>
+        <div class="box btnbox"><input type="submit" value="确认" /></div>
+    </div>
+    <div class="container page idcard-con" data-tt="3">
+        <div class="box name line"><input type="text" placeholder="你的姓名" class="num-txt"/> <div class="error">请输入正确的姓名</div></div>
+        <div class="box idcard line"><input type="text" placeholder="身份证号码" class="pwd-txt"/> <div class="error">姓名跟身份证号码不匹配，请重新输入</div></div>
+        <div class="box btnbox"><input type="submit" value="登录" /></div>
+        <div class="box msg f-cb"><a href="#" class="f-fl">注册新账号</a> <a href="#" class="f-fr">忘记密码?</a></div>
+    </div>
+    <script src="js/zepto.min.js"></script>
+    <script>
+        $(function(){
+            var iNow = 3; //当前页面
+            var aTt = ['登录','注册','密码设置','身份验证'];
+            $('.header h2').html(aTt[iNow]);
+            $('.page').eq(iNow).addClass('z-sel');
+        });
+
+        $(function(){
+            $('.login-con .num-txt,.login-con .pwd-txt').on('change',function(){
+                var inum = $('.login-con .num-txt').val();
+                var apwd = $('.login-con .pwd-txt').val();
+                var re = /^1\d{10}$/;
+                if(inum && apwd && re.test(inum)){  //判断手机号码非空 && 密码框非空  &&  手机号码是否为11位
+                    $('.login-con .btnbox input').addClass('login-btn');
+                } else{
+                    $('.login-con .btnbox input').removeClass('login-btn');
+                }
+            })
+        });
+        $(function(){
+            var flag = true;
+            var timer = null;
+            var times = total =  60;
+
+           $('.reg-con .yzm-btn').on('click',function(){
+               if(!flag) return false;
+               flag = false;
+               $(this).css('backgroundColor','#d3d3d3');
+               timer = setInterval(function(){
+                   $('.reg-con .yzm-btn').val( --times + '秒后再获取');
+                   if(times == 0){
+                       $('.reg-con .yzm-btn').css('backgroundColor','#f96c10').val('再次获取');
+                       clearInterval(timer);
+                       times = total;
+                       flag = true;
+                   }
+               },1000);
+           })
+
+        });
+
+
+    </script>
+</body>
+</html>
