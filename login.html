@@ -12,14 +12,30 @@
         <a href="#" class="backbtn">&nbsp;</a>
         <h2>登录</h2>
     </div>
-    <div class="container login-con">
+    <div class="container  login-con" data-tt="0">
         <div class="box number line"><input type="tel" placeholder="输入手机号码" class="num-txt"/></div>
         <div class="box pwd line"><input type="password" placeholder="输入密码" class="pwd-txt"/></div>
-        <div class="box loginbtn"><input type="submit" value="登录" /></div>
+        <div class="box btnbox"><input type="submit" value="登录" /></div>
         <div class="box msg f-cb"><a href="#" class="f-fl">注册新账号</a> <a href="#" class="f-fr">忘记密码?</a></div>
     </div>
+
     <script src="js/zepto.min.js"></script>
     <script>
+
+        $(function(){
+            $('.login-con .num-txt,.login-con .pwd-txt').on('change',function(){
+                var inum = $('.login-con .num-txt').val();
+                var apwd = $('.login-con .pwd-txt').val();
+                var re = /^1\d{10}$/;
+                if(inum && apwd && re.test(inum)){  //判断手机号码非空 && 密码框非空  &&  手机号码是否为11位
+
+                    $('.login-con .btnbox input').addClass('z-sel');
+                } else{
+                    $('.login-con .btnbox input').removeClass('z-sel');
+                }
+            })
+        });
+
 
     </script>
 </body>
