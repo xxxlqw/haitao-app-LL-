@@ -32,3 +32,5 @@ html { overflow-y: scroll; }
 .f-fr{float: right}
 .f-cb:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
 .f-cb{*zoom:1;}
+input{-webkit-appearance: none; outline: none;}
+a:hover{text-decoration: none;outline: none;}
