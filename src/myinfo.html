@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/modules.css?v=1"/>
+    <script>
+        //设置根节点的大小
+        (function(){var oHtml=document.getElementsByTagName("html")[0];oHtml.style.fontSize=window.innerWidth/8+"px";window.onchange=function(){oHtml.style.fontSize=window.innerWidth/8+"px"};})();
+    </script>
+    <title></title>
+</head>
+<body class=" myinfo-body">
+
+<!--p1 begin-->
+<div class="myinfo-p myinfo-p1">
+    <div class="header myinfo-header">
+        <a href="#" class="backbtn">&nbsp;</a>
+        <h2>个人资料</h2>
+    </div>
+    <div class="container myinfo-con">
+        <div class="boxes box1  f-cb">
+            <div class="g-tt">头像 <span class="f-fr u-more"><img src="images/mrtx.png" alt=""/></span></div>
+            <div class="g-tt">姓名 <span class="f-fr">廖书鹏</span></div>
+            <div class="g-tt sex-box">性别 <span class="f-fr u-more">男</span></div>
+            <div class="g-tt">手机 <span class="f-fr">15854612540</span></div>
+        </div>
+        <div class="boxes box2  f-cb">
+            <div class="g-tt">收货地址 <span class="f-fr u-more"></span></div>
+        </div>
+    </div>
+</div>
+
+<!--p1 end-->
+<!-- p2 性别选择 begin-->
+<div class="myinfo-p myinfo-p2 " style="display: none" >
+    <ul class="sexlst">
+        <li class="g-tt">性别选择</li>
+        <li class="man">男</li>
+        <li class="woman">女</li>
+    </ul>
+</div>
+<!-- p2 性别选择 end-->
+
+<script src="js/zepto.min.js"></script>
+<script>
+    $(function(){
+        $('.sex-box').on('tap',function(){
+            $('.myinfo-p2').show();
+        });
+        $('.sexlst li').on('touchend',function(ev){
+            ev.stopPropagation();
+            $(this).addClass('z-sel').siblings('li').removeClass('z-sel');
+            $('.myinfo-p2').hide();
+        });
+        $('.myinfo-p2').on('tap',function(){
+            $(this).hide();
+        })
+    })
+</script>
+
+
+</body>
+</html>

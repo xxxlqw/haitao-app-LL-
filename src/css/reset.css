@@ -7,7 +7,7 @@ th, td {
 }
 body,
 button, input, select, textarea {
-    font: 14px/1 Microsoft Yahei, Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+    font: 0.3rem/1 Microsoft Yahei, Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
 }
 h1 { font-size: 18px; }
 h2 { font-size: 16px; }

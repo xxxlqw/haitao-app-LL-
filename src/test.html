@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body >
+<script language="javascript">
+    var _s="close";
+    window.onunload = function(){
+        if(_s=="fresh")
+            alert('刷新');
+        else
+            alert('关闭');
+    }
+
+    window.onbeforeunload = function(){
+        _s="fresh";
+    }
+</script>
+</body>
+</html>

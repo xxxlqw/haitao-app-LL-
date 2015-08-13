@@ -5,11 +5,15 @@
     <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/modules.css?v=1"/>
+    <script>
+        //设置根节点的大小
+        (function(){var oHtml=document.getElementsByTagName("html")[0];oHtml.style.fontSize=window.innerWidth/8+"px";window.onchange=function(){oHtml.style.fontSize=window.innerWidth/8+"px"};})();
+    </script>
     <title></title>
 </head>
 <body class="appbody shopcart-body">
     <!--p1 begin-->
-    <div class="shopcart-p shopcart-p1" style="display: none">
+    <div class="shopcart-p shopcart-p1" >
         <div class="header shopcart-header">
             <h2>购物车</h2>
             <a href="#">编辑</a>
@@ -156,7 +160,7 @@
     <!--p1 end-->
 
     <!--p2 begin-->
-    <div class="shopcart-p shopcart-p2" >
+    <div class="shopcart-p shopcart-p2" style="display: none">
         <div class="header shopcart-header">
             <h2>购物车</h2>
             <a href="#">完成</a>

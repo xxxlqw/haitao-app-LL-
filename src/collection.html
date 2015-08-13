@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title></title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/modules.css?v=2"/>
+    <script>
+        //设置根节点的大小
+        (function(){var oHtml=document.getElementsByTagName("html")[0];oHtml.style.fontSize=window.innerWidth/8+"px";window.onchange=function(){oHtml.style.fontSize=window.innerWidth/8+"px"};})();
+    </script>
+</head>
+<body class="collection-body">
+    <div class="header collection-header">
+        <a href="#" class="backbtn">&nbsp;</a>
+        <h2>我的收藏</h2>
+    </div>
+    <ul class="collection-nav f-cb">
+        <li class="z-sel">商品</li>
+        <li>店铺</li>
+    </ul>
+    <div class="container collection-con">
+        <ul class="product-lst lst" >
+            <li>
+                <div class="img"><img src="images/12.jpg" alt=""/></div>
+                <div class="goods-info">
+                    <div class="name"><div class="text">婴儿奶粉婴儿奶粉婴儿奶粉婴儿奶粉婴儿奶粉</div></div>
+                    <div class="where"><span class="flag"><img src="images/flag.png" alt=""/></span>德国直供 保税仓发货</div>
+                    <div class="price"><span class="new">￥95</span><span class="old">￥110</span></div>
+                </div>
+            </li>
+            <li>
+                <div class="img"><img src="images/12.jpg" alt=""/></div>
+                <div class="goods-info">
+                    <div class="name"><div class="text">婴儿奶粉婴儿奶粉婴儿奶粉婴儿奶粉婴儿奶粉</div></div>
+                    <div class="where"><span class="flag"><img src="images/flag.png" alt=""/></span>德国直供 保税仓发货</div>
+                    <div class="price"><span class="new">￥95</span><span class="old">￥110</span></div>
+                </div>
+            </li>
+            <li>
+                <div class="img"><img src="images/12.jpg" alt=""/></div>
+                <div class="goods-info">
+                    <div class="name"><div class="text">婴儿奶粉婴儿奶粉婴儿奶粉婴儿奶粉婴儿奶粉</div></div>
+                    <div class="where"><span class="flag"><img src="images/flag.png" alt=""/></span>德国直供 保税仓发货</div>
+                    <div class="price"><span class="new">￥95</span><span class="old">￥110</span></div>
+                </div>
+            </li>
+        </ul>
+
+        <ul class="product-lst store-lst">
+            <li>
+                <div class="img"><img src="images/13.jpg" alt=""/></div>
+                <div class="store-info">
+                    <div class="tt">乐贝德婴儿奶粉店</div>
+                    <div class="hot">人气：25654</div>
+                </div>
+                <span class="f-fr u-more"></span>
+            </li>
+            <li>
+                <div class="img"><img src="images/13.jpg" alt=""/></div>
+                <div class="store-info">
+                    <div class="tt">乐贝德婴儿奶粉店</div>
+                    <div class="hot">人气：25654</div>
+                </div>
+                <span class="f-fr u-more"></span>
+            </li>
+            <li>
+                <div class="img"><img src="images/13.jpg" alt=""/></div>
+                <div class="store-info">
+                    <div class="tt">乐贝德婴儿奶粉店</div>
+                    <div class="hot">人气：25654</div>
+                </div>
+                <span class="f-fr u-more"></span>
+            </li>
+            <li>
+                <div class="img"><img src="images/13.jpg" alt=""/></div>
+                <div class="store-info">
+                    <div class="tt">乐贝德婴儿奶粉店</div>
+                    <div class="hot">人气：25654</div>
+                </div>
+                <span class="f-fr u-more"></span>
+            </li>
+            <li>
+                <div class="img"><img src="images/13.jpg" alt=""/></div>
+                <div class="store-info">
+                    <div class="tt">乐贝德婴儿奶粉店</div>
+                    <div class="hot">人气：25654</div>
+                </div>
+                <span class="f-fr u-more"></span>
+            </li>
+            <li>
+                <div class="img"><img src="images/13.jpg" alt=""/></div>
+                <div class="store-info">
+                    <div class="tt">乐贝德婴儿奶粉店</div>
+                    <div class="hot">人气：25654</div>
+                </div>
+                <span class="f-fr u-more"></span>
+            </li>
+            <li>
+                <div class="img"><img src="images/13.jpg" alt=""/></div>
+                <div class="store-info">
+                    <div class="tt">乐贝德婴儿奶粉店</div>
+                    <div class="hot">人气：25654</div>
+                </div>
+                <span class="f-fr u-more"></span>
+            </li>
+        </ul>
+    </div>
+    <script src="js/zepto.min.js"></script>
+    <script>
+        $(function(){
+            $('.collection-nav li').on('tap',function(){
+                $(this).addClass('z-sel').siblings('li').removeClass('z-sel');
+                $('.collection-con .product-lst').eq($(this).index()).show().siblings('.product-lst').hide();
+            })
+        })
+    </script>
+</body>
+</html>
