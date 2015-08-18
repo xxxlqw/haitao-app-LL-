@@ -14,7 +14,7 @@ h2 { font-size: 16px; }
 h3 { font-size: 14px; }
 h4, h5, h6 { font-size: 100%; }
 ul, ol { list-style: none; }
-a { text-decoration: none; color: #838383; }
+a { text-decoration: none; color: #8c8c8c; }
 a:hover { text-decoration: underline; }
  img { border: none; }
 button, input, select, textarea {
@@ -25,7 +25,7 @@ table {
     border-spacing: 0;
 }
 
-html { overflow-y: scroll; }
+html { overflow-y: scroll; color: #8c8c8c; }
 
 .f-fwb{font-weight: bold}
 .f-fl{float: left}

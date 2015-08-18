@@ -2,26 +2,124 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title></title>
     <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="css/reset.css"/>
-    <link rel="stylesheet" href="css/modules.css"/>
-    <title></title>
+    <link rel="stylesheet" href="css/modules.css?v=1"/>
+    <script>
+        //设置根节点的大小
+        (function(){var oHtml=document.getElementsByTagName("html")[0];oHtml.style.fontSize=window.innerWidth/8+"px";window.onchange=function(){oHtml.style.fontSize=window.innerWidth/8+"px"};})();
+    </script>
 </head>
 <body class="appbody">
-    <div class="header class-header">
+    <div class="header index-header">
         <div class="box f-cb">
-            <div class="f-fl"><a href="#" class="sewm"></a></div>
-            <div class="sear-box f-fr"><input type="text" placeholder="搜索商品"/></div>
+            <a href="#" class="sewm f-fl"></a>
+            <div class="sear-box f-fl"><input type="text" placeholder="搜索商品"/></div>
+            <div class="msg f-fr">消息<sup>2</sup></div>
         </div>
     </div>
-    <div class="banner"></div>
     <div class="container index-con">
-        <div class="enter">
-            <div class="g-tt f-cb">
-                <span class="f-fl">入驻商家</span>
-                <a href="#" class="f-fr">更多&gt;</a>
+        <div class="banner">
+            <img src="images/banner.jpg" alt=""/>
+        </div>
+        <div class="g-main">
+            <div class="boxes box1">
+                <div class="g-tt">
+                    入驻商家 <a href="#">全部</a>
+                </div>
+                <div class="mn">
+                    <a href="#"><img src="images/1.jpg" alt=""/></a><a href="#"><img src="images/2.jpg" alt=""/></a><a href="#"><img src="images/3.jpg" alt=""/></a><a href="#"><img src="images/1.jpg" alt=""/></a><a href="#"><img src="images/2.jpg" alt=""/></a><a href="#"><img src="images/3.jpg" alt=""/></a><a href="#"><img src="images/2.jpg" alt=""/></a><a href="#"><img src="images/3.jpg" alt=""/></a>
+                </div>
             </div>
+            <div class="boxes box2">
+                <div class="g-tt">
+                    限量抢购 <a href="#">全部</a>
+                </div>
+                <div class="mn">
+                    <ul class="lst f-cb">
+                        <li>
+                            <div class="img"><a href="#"><img src="images/a1.jpg" alt=""/></a></div>
+                            <div class="info">
+                                <div class="b1"><a href="#">dress连衣裙</a></div>
+                                <div class="b2 price"><a href="#" class="new">￥255</a></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img"><a href="#"><img src="images/a2.jpg" alt=""/></a></div>
+                            <div class="info">
+                                <div class="b1"><a href="#">dress连衣裙</a></div>
+                                <div class="b2 price"><a href="#" class="new">￥255</a></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img"><a href="#"><img src="images/a3.jpg" alt=""/></a></div>
+                            <div class="info">
+                                <div class="b1"><a href="#">dress连衣裙</a></div>
+                                <div class="b2 price"><a href="#" class="new">￥255</a></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img"><a href="#"><img src="images/a2.jpg" alt=""/></a></div>
+                            <div class="info">
+                                <div class="b1"><a href="#">dress连衣裙</a></div>
+                                <div class="b2 price"><a href="#" class="new">￥255</a></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img"><a href="#"><img src="images/a3.jpg" alt=""/></a></div>
+                            <div class="info">
+                                <div class="b1"><a href="#">dress连衣裙</a></div>
+                                <div class="b2 price"><a href="#" class="new">￥255</a></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img"><a href="#"><img src="images/a2.jpg" alt=""/></a></div>
+                            <div class="info">
+                                <div class="b1"><a href="#">dress连衣裙</a></div>
+                                <div class="b2 price"><a href="#" class="new">￥255</a></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img"><a href="#"><img src="images/a3.jpg" alt=""/></a></div>
+                            <div class="info">
+                                <div class="b1"><a href="#">dress连衣裙</a></div>
+                                <div class="b2 price"><a href="#" class="new">￥255</a></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
         </div>
     </div>
+
+
+    <div class="footer">
+        <a href="#" class="g-nav g-nav1  z-sel">
+            首页
+        </a>
+        <a href="#" class="g-nav g-nav2">
+            分类
+        </a>
+        <a href="#" class="g-nav g-nav3 ">
+            购物车
+        </a>
+        <a href="#" class="g-nav g-nav4 ">
+            我的
+        </a>
+    </div>
+
+    <script src="js/zepto.min.js"></script>
+    <script>
+        $(function(){
+            $('.class-con .g-menu li').on('tap',function(){
+                $(this).addClass('z-sel').siblings('li').removeClass('z-sel');
+
+                $('.class-con .g-main .g-bd').eq($(this).index()).addClass('z-sel').siblings('.g-bd').removeClass('z-sel');
+            })
+        })
+    </script>
 </body>
 </html>

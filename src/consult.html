@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title></title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/modules.css?v=2"/>
+    <script>
+        //设置根节点的大小
+        (function(){var oHtml=document.getElementsByTagName("html")[0];oHtml.style.fontSize=window.innerWidth/8+"px";window.onchange=function(){oHtml.style.fontSize=window.innerWidth/8+"px"};})();
+    </script>
+</head>
+<body class="consult-body appbody">
+    <div class="header detail-header">
+        <a href="#" class="backbtn">&nbsp;</a>
+        <h2>在线咨询</h2>
+        <a href="javascript:void(0)" class="more">
+            <span class="round"></span>
+        </a>
+
+        <ul class="morelst">
+            <li><a href="#">分享</a></li>
+            <li><a href="#">收藏</a></li>
+            <li><a href="#">首页</a></li>
+        </ul>
+    </div>
+    <div class="container consult-con">
+        <ul class="lst g-comment lst4 ">
+            <li>
+                <div class="img f-fl"><img src="images/tx.jpg" alt=""/></div>
+                <div class="comment-info">
+                    <div class="name">廖书鹏</div>
+                    <div class="comments">您好，我想这个是从哪里发货？</div>
+                </div>
+            </li>
+            <li class="special">
+                <div class="img f-fl"><img src="images/tx.jpg" alt=""/></div>
+                <div class="comment-info">
+                    <div class="name">摩登时尚</div>
+                    <div class="comments">您好，我想这个是从哪里发货？</div>
+                </div>
+            </li>
+            <li>
+                <div class="img f-fl"><img src="images/tx.jpg" alt=""/></div>
+                <div class="comment-info">
+                    <div class="name">廖书鹏</div>
+                    <div class="comments">您好，我想这个是从哪里发货？</div>
+                </div>
+            </li>
+            <li>
+                <div class="img f-fl"><img src="images/tx.jpg" alt=""/></div>
+                <div class="comment-info">
+                    <div class="name">廖书鹏</div>
+                    <div class="comments">您好，我想这个是从哪里发货？</div>
+                </div>
+            </li>
+            <li>
+                <div class="img f-fl"><img src="images/tx.jpg" alt=""/></div>
+                <div class="comment-info">
+                    <div class="name">廖书鹏</div>
+                    <div class="comments">您好，我想这个是从哪里发货？</div>
+                </div>
+            </li>
+            <li>
+                <div class="img f-fl"><img src="images/tx.jpg" alt=""/></div>
+                <div class="comment-info">
+                    <div class="name">廖书鹏</div>
+                    <div class="comments">您好，我想这个是从哪里发货？</div>
+                </div>
+            </li>
+            <li>
+                <div class="img f-fl"><img src="images/tx.jpg" alt=""/></div>
+                <div class="comment-info">
+                    <div class="name">廖书鹏</div>
+                    <div class="comments">您好，我想这个是从哪里发货？</div>
+                </div>
+            </li>
+            <li>
+                <div class="img f-fl"><img src="images/tx.jpg" alt=""/></div>
+                <div class="comment-info">
+                    <div class="name">廖书鹏</div>
+                    <div class="comments">您好，我想这个是从哪里发货？</div>
+                </div>
+            </li>
+            <li>
+                <div class="img f-fl"><img src="images/tx.jpg" alt=""/></div>
+                <div class="comment-info">
+                    <div class="name">廖书鹏</div>
+                    <div class="comments">您好，我想这个是从哪里发货？</div>
+                </div>
+            </li>
+            <li>
+                <div class="img f-fl"><img src="images/tx.jpg" alt=""/></div>
+                <div class="comment-info">
+                    <div class="name">廖书鹏</div>
+                    <div class="comments">您好，我想这个是从哪里发货？</div>
+                </div>
+            </li>
+        </ul>
+
+
+    </div>
+
+    <div class="consult-foot footer">
+        <input type="text" placeholder="请输入您的问题"/>
+        <input type="button" value="提交"/>
+    </div>
+
+
+    <!-- 往上弹的小切片-->
+    <div class="alert">提交成功</div>
+
+    <script src="js/zepto.min.js"></script>
+    <script>
+        $(function(){
+
+            $('.consult-foot input[type=\'button\']').on('tap',function(){
+                $('.consult-foot input[type=\'text\']').val('');
+                $('.alert').show().addClass('alertswitch');
+                setTimeout(function(){
+                    $('.alert').hide().removeClass('alertswitch');
+                },2000);
+            })
+        })
+    </script>
+</body>
+</html>

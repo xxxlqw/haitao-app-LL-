@@ -6,17 +6,19 @@
 </head>
 <body >
 <script language="javascript">
-    var _s="close";
-    window.onunload = function(){
-        if(_s=="fresh")
-            alert('刷新');
-        else
-            alert('关闭');
-    }
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+                };
 
-    window.onbeforeunload = function(){
-        _s="fresh";
-    }
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
 </script>
 </body>
 </html>

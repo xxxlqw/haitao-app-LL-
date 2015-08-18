@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title></title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/modules.css?v=2"/>
+    <script>
+        //设置根节点的大小
+        (function(){var oHtml=document.getElementsByTagName("html")[0];oHtml.style.fontSize=window.innerWidth/8+"px";window.onchange=function(){oHtml.style.fontSize=window.innerWidth/8+"px"};})();
+    </script>
+</head>
+<body class=" appbody answer-body">
+    <div class="header detail-header">
+        <a href="#" class="backbtn">&nbsp;</a>
+        <h2>商家回复</h2>
+        <a href="javascript:void(0)" class="more">
+            <span class="round"></span>
+        </a>
+
+        <ul class="morelst">
+            <li><a href="#">分享</a></li>
+            <li><a href="#">收藏</a></li>
+            <li><a href="#">首页</a></li>
+        </ul>
+    </div>
+    <div class="container consult-con answer-con">
+        <div class="pro">
+            <div class="img"><img src="images/12.jpg" alt=""/></div>
+            <div class="goods-info">
+                <div class="name"><div class="text">婴儿奶粉婴儿奶粉婴儿奶粉婴儿奶粉婴儿奶粉</div></div>
+                <div class="where"><span class="flag"><img src="images/flag.png" alt=""/></span>德国直供 保税仓发货</div>
+                <div class="price"><span class="new">￥110</span></div>
+            </div>
+        </div>
+        <ul class="lst g-comment lst4 ">
+            <li>
+                <div class="img f-fl"><img src="images/tx.jpg" alt=""/></div>
+                <div class="comment-info">
+                    <div class="name">廖书鹏</div>
+                    <div class="comments">您好，我想这个是从哪里发货？</div>
+                </div>
+            </li>
+            <li class="special">
+                <div class="img f-fl"><img src="images/tx.jpg" alt=""/></div>
+                <div class="comment-info">
+                    <div class="name">摩登时尚</div>
+                    <div class="comments">您好，我想这个是从哪里发货？</div>
+                </div>
+            </li>
+
+            <li>
+                <div class="img f-fl"><img src="images/tx.jpg" alt=""/></div>
+                <div class="comment-info">
+                    <div class="name">廖书鹏</div>
+                    <div class="comments">您好，我想这个是从哪里发货？</div>
+                </div>
+            </li>
+            <li>
+                <div class="img f-fl"><img src="images/tx.jpg" alt=""/></div>
+                <div class="comment-info">
+                    <div class="name">廖书鹏</div>
+                    <div class="comments">您好，我想这个是从哪里发货？</div>
+                </div>
+            </li>
+        </ul>
+
+
+    </div>
+
+
+
+    <script src="js/zepto.min.js"></script>
+    <script src="js/swipe.js"></script>
+    <script>
+
+
+        $(function(){
+            $('.header .more').on('click',function(){
+                $('.morelst').toggle();
+            });
+            $('.morelst').on('click','li',function(){
+                if($(this).index() == 1){
+                    $(this).find('a').text('取消关注');
+                };
+                $('.morelst').hide();
+            })
+
+        })
+
+
+
+    </script>
+
+</body>
+</html>

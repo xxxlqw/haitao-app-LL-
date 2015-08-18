@@ -16,11 +16,11 @@
         <a href="#" class="backbtn">&nbsp;</a>
         <h2>我的收藏</h2>
     </div>
-    <ul class="collection-nav f-cb">
+    <ul class="collection-nav f-cb tab-hd">
         <li class="z-sel">商品</li>
         <li>店铺</li>
     </ul>
-    <div class="container collection-con">
+    <div class="container collection-con tab-bd">
         <ul class="product-lst lst" >
             <li>
                 <div class="img"><img src="images/12.jpg" alt=""/></div>
@@ -110,7 +110,7 @@
     <script src="js/zepto.min.js"></script>
     <script>
         $(function(){
-            $('.collection-nav li').on('tap',function(){
+            $('.tab-hd li').on('tap',function(){
                 $(this).addClass('z-sel').siblings('li').removeClass('z-sel');
                 $('.collection-con .product-lst').eq($(this).index()).show().siblings('.product-lst').hide();
             })

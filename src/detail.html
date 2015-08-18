@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/modules.css?v=1"/>
+    <script>
+        //设置根节点的大小
+        (function(){var oHtml=document.getElementsByTagName("html")[0];oHtml.style.fontSize=window.innerWidth/8+"px";window.onchange=function(){oHtml.style.fontSize=window.innerWidth/8+"px"};})();
+    </script>
+    <title></title>
+    <style>
+        .swipe {
+            overflow: hidden;
+            visibility: hidden;
+            position: relative;
+        }
+        .swiper-wrapper {
+            overflow: hidden;
+            position: relative;
+        }
+        .swiper-wrapper .swiper-slide {
+            float:left;
+            width:100%;
+            position: relative;
+        }
+    </style>
+</head>
+<body class="appbody detail-body">
+
+
+    <div class="header detail-header">
+        <a href="#" class="backbtn">&nbsp;</a>
+        <h2>商品详情</h2>
+        <a href="javascript:void(0)" class="more">
+            <span class="round"></span>
+        </a>
+        
+        <ul class="morelst">
+            <li><a href="#">分享</a></li>
+            <li><a href="#">收藏</a></li>
+            <li><a href="#">首页</a></li>
+        </ul>
+    </div>
+    <div class="container detail-con">
+        <div class="boxes pro-box">
+            <div class="pic-lst swipe" id="slider">
+                <ul class="pic f-cb swiper-wrapper">
+                    <li  class="swiper-slide"> <div class="img"><img src="images/img.jpg" alt=""/></div></li>
+                    <li  class="swiper-slide"> <div class="img"><img src="images/img.jpg" alt=""/></div></li>
+                    <li  class="swiper-slide"> <div class="img"><img src="images/img.jpg" alt=""/></div></li>
+                </ul>
+                <ul class="ctrl" id="position">
+                    <li class="z-sel"></li><li></li><li></li>
+                </ul>
+            </div>
+            <div class="g-proinfo f-cb">
+                <div class="tt"><div class="text">新西兰Karicare/可瑞康 金装加强系列 三段新版金装新西兰</div></div>
+                <div class="f-fl">
+                    <div class="price"><span class="new">￥119</span><span class="old">￥200</span></div>
+                    <div class="tips">进口税：9.30  每单进口税低于50免征</div>
+                    <div class="from">广东广州  至  深圳</div>
+                </div>
+                <div class="f-fr">
+                    <div class="b1">已售：612</div>
+                    <div class="b2">运费：10.00</div>
+                </div>
+
+            </div>
+        </div>
+        <div class="boxes box2  f-cb">
+            <div class="g-tt">收货地址 <span class="f-fr u-more"></span></div>
+        </div>
+        <div class="boxes box3  f-cb">
+            <div class="g-tt">商品评价</div>
+            <div class="g-mn">
+                <!-- 有评价 begin-->
+                <ul class="lst">
+                    <li>
+                        <div class="g-top f-cb"><div class="img f-fl"><img src="images/tx.jpg" alt=""/></div> <div class="name f-fl">廖书鹏</div></div>
+                        <div class="comment">
+                            棒棒哒，优质的服务，买着放心。（内容全部显示）
+                        </div>
+                    </li>
+                    <li>
+                        <div class="g-top f-cb"><div class="img f-fl"><img src="images/tx.jpg" alt=""/></div> <div class="name f-fl">廖书鹏</div></div>
+                        <div class="comment">
+                            棒棒哒，优质的服务，买着放心。棒棒哒，优质的服务，买着放心。棒棒哒，优质的服务，买着放心。棒棒哒，优质的服务，买着放心。棒棒哒，优质的服务，买着放心。棒棒哒，优质的服务，买着放心。棒棒哒，优质的服务，买着放心。（内容全部显示）
+                        </div>
+                    </li>
+                    <li>
+                        <div class="g-top f-cb"><div class="img f-fl"><img src="images/tx.jpg" alt=""/></div> <div class="name f-fl">廖书鹏</div></div>
+                        <div class="comment">
+                            棒棒哒，优质的服务，买着放心。（内容全部显示）
+                        </div>
+                    </li>
+                    <li>
+                        <div class="g-top f-cb"><div class="img f-fl"><img src="images/tx.jpg" alt=""/></div> <div class="name f-fl">廖书鹏</div></div>
+                        <div class="comment">
+                            棒棒哒，优质的服务，买着放心。（内容全部显示）
+                        </div>
+                    </li>
+                </ul>
+                <div class="u-morebtn">
+                    查看全部评价
+                </div>
+                <!-- 有评价 end-->
+
+                <!-- 无评价 begin-->
+                <!--<div class="no-comment">-->
+                    <!--暂无评价哦~-->
+                <!--</div>-->
+                <!-- 无评价 end-->
+
+
+            </div>
+
+        </div>
+
+        <div class="boxes box4 f-cb">
+           <div class="img f-fl"><img src="images/logo1.jpg" alt=""/></div>
+            <div class="f-fl bb">
+                <div class="pro-name">臣生奶粉</div>
+                <div class="personal f-cb"> <span class="f-fl">人气：13468</span> <span class="f-fr">好评：13468</span></div>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+    <div class="detail-footer">
+        <a href="#" class="g-nav g-nav1">
+           在线咨询
+        </a>
+        <a href="#" class="g-nav g-nav2">
+            加入购物车
+        </a>
+        <a href="#" class="g-nav g-nav3 ">
+            购买
+        </a>
+    </div>
+
+    <script src="js/zepto.min.js"></script>
+    <script src="js/swipe.js"></script>
+    <script>
+        //商品图片轮播
+        $(function(){
+            var slider = new Swipe(document.getElementById('slider'), {
+                loop: true,
+                continuous: true,
+                callback: function(pos) {
+
+                    var i = bullets.length;
+                    while (i--) {
+                        bullets[i].className = ' ';
+                    }
+                    bullets[pos].className = 'z-sel';
+
+                }
+            });
+            var bullets = document.getElementById('position').getElementsByTagName('li');
+        });
+
+        $(function(){
+            $('.header .more').on('click',function(){
+                $('.morelst').toggle();
+            });
+            $('.morelst').on('click','li',function(){
+               if($(this).index() == 1){
+                   $(this).find('a').text('取消关注');
+               };
+                $('.morelst').hide();
+            })
+
+        })
+
+
+
+    </script>
+
+
+</body>
+</html>

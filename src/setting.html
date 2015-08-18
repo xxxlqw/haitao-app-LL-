@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/modules.css?v=1"/>
+    <script>
+        //设置根节点的大小
+        (function(){var oHtml=document.getElementsByTagName("html")[0];oHtml.style.fontSize=window.innerWidth/8+"px";window.onchange=function(){oHtml.style.fontSize=window.innerWidth/8+"px"};})();
+    </script>
+    <title></title>
+</head>
+<body class="setting-body appbody">
+
+<!--p1 begin-->
+<div class="setting-p setting-p1" >
+    <div class="header myinfo-header">
+        <a href="#" class="backbtn">&nbsp;</a>
+        <h2>账户设置</h2>
+    </div>
+    <div class="container setting-con">
+        <div class="boxes box1  f-cb">
+            <div class="g-tt">收货地址 <span class="f-fr u-more"></span></div>
+        </div>
+        <div class="boxes box2  f-cb">
+            <div class="g-tt">图片质量调整 <span class="f-fr changebtn"> <input type="checkbox" id="change1" class="change1"/><label
+                    for="change1"></label> </span></div>
+            <div class="g-tt">接受推送消息 <span class="f-fr changebtn"><input type="checkbox" id="change2" class="change1"/><label
+                    for="change2"></label> </span></div>
+            <div class="g-tt">通知提示音 <span class="f-fr changebtn"><input type="checkbox" id="change3" class="change1"/><label
+                    for="change3"></label> </span></div>
+        </div>
+        <div class="boxes box3  f-cb">
+            <div class="g-tt">清理缓存 <span class="f-fr "></span></div>
+            <div class="g-tt">版本更新 <span class="f-fr font-red">发现新版本</span></div>
+            <div class="g-tt">服务承诺 <span class="f-fr u-more"></span></div>
+        </div>
+        <div class="boxes box4  f-cb">
+            <div class="g-tt">评价反馈 <span class="f-fr "></span></div>
+            <div class="g-tt">客服热线 <span class="f-fr ">400-123-456</span></div>
+        </div>
+    </div>
+    <div class="footer setting-footer">
+        退出当前账号
+    </div>
+
+
+</div>
+<!--p1 end-->
+
+<!--p2 意见反馈 begin-->
+<div class="setting-p setting-p2">
+    <div class="header myinfo-header">
+        <a href="#" class="backbtn">&nbsp;</a>
+        <h2>意见反馈</h2>
+    </div>
+    <div class="container setting-con">
+        <textarea name="" class="textarea" placeholder="亲，请尽情的吐槽吧~"></textarea>
+        <input type="text" class="contact-txt" placeholder="联系方式"/>
+        <input type="button" value="提交" class="sub-btn"/>
+
+    </div>
+
+
+</div>
+<!--p2 end-->
+
+<!-- 往上弹的小切片-->
+<div class="alert">缓存已清理</div>
+
+<!-- 发现新版本的对话框-->
+<div class="dialog-box version-box">
+    <div class="dialog">
+        <div class="g-tt">
+            <div class="b1">发现新版本</div>
+            <div class="b2">1.2大小36M</div>
+        </div>
+        <div class="btn"><div class="cancel">稍后更新</div><div class="sure">立即更新</div></div>
+    </div>
+</div>
+<!-- 退出的对话框-->
+<div class="dialog-box signout-box">
+    <div class="dialog">
+        <div class="g-tt">退出当前帐号</div>
+        <div class="btn"><div class="cancel">取消</div><div class="sure">确定</div></div>
+    </div>
+</div>
+
+
+<script src="js/zepto.min.js"></script>
+<script>
+    $(function(){
+//        弹出“缓存清理”小切片
+        $('.box3 .g-tt').eq(0).on('tap',function(){
+            $('.alert').show().addClass('alertswitch');
+            setTimeout(function(){
+                $('.alert').hide().removeClass('alertswitch');
+            },2000);
+        })
+
+    });
+    $(function(){
+//        弹出版本窗口
+        $('.box3 .g-tt').eq(1).on('tap',function(){
+            $('.version-box').show();
+            return false;
+        });
+        $('.dialog-box .cancel').on('click',function(){
+            $(".version-box").hide();
+            return false;
+        });
+
+        $('.version-box .sure').on('click',function(e){
+            $('.version-box').hide();
+        })
+    })
+    //评价反馈
+    $(function(){
+        $('.box4 .g-tt').eq(0).on('tap',function(){
+            $('.setting-p1').addClass('pagehide');
+            $('.setting-p2').addClass('pageshow');
+        });
+    });
+//    退出登录
+    $(function(){
+        $('.setting-footer').on('tap',function(){
+            $('.signout-box').show();
+            return false;
+        });
+        $('.signout-box .cancel').on('click',function(){
+            $('.dialog-box').hide();
+            return false;
+        });
+
+        $('.signout-box .sure').on('click',function(e){
+            $('.signout-box').hide();
+        })
+    })
+
+</script>
+
+
+</body>
+</html>

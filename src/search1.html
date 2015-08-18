@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/modules.css"/>
+    <title></title>
+    <script>
+        //设置根节点的大小
+        (function(){var oHtml=document.getElementsByTagName("html")[0];oHtml.style.fontSize=window.innerWidth/8+"px";window.onchange=function(){oHtml.style.fontSize=window.innerWidth/8+"px"};})();
+    </script>
+</head>
+<body class="appbody search1-body">
+    <div class="header search-header">
+        <div class="box f-cb">
+            <a href="#" class="backbtn">&nbsp;</a>
+            <div class="seller-box f-fl">
+                <div class="showtt">商家</div>
+                <ul>
+                    <li>商家</li>
+                    <li>商品</li>
+                </ul>
+            </div>
+            <div class="sear-box f-fl"><input type="text" placeholder="搜索商品"/></div>
+            <div class="searbtn f-fl"><input type="button" value="搜索"/></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="last-sear">
+            <div class="g-tt">最近搜索</div>
+            <ul class="lst">
+                <li><a href="#">耐克</a></li>
+                <li><a href="#">耐克</a></li>
+                <li><a href="#">耐克</a></li>
+                <li><a href="#">耐克</a></li>
+                <li><a href="#">耐克</a></li>
+                <li><a href="#">李宁专卖店</a></li>
+                <li><a href="#">耐克</a></li>
+                <li><a href="#">耐克</a></li>
+                <li><a href="#">耐克</a></li>
+                <li><a href="#">耐克</a></li>
+                <li><a href="#">耐克</a></li>
+                <li><a href="#">李宁专卖店</a></li>
+                <li><a href="#">耐克</a></li>
+                <li><a href="#">耐克</a></li>
+                <li><a href="#">耐克</a></li>
+                <li><a href="#">耐克</a></li>
+                <li><a href="#">耐克</a></li>
+                <li><a href="#">李宁专卖店</a></li>
+                <li><a href="#">耐克</a></li>
+                <li><a href="#">耐克</a></li>
+                <li><a href="#">耐克</a></li>
+                <li><a href="#">耐克</a></li>
+                <li><a href="#">耐克</a></li>
+                <li><a href="#">李宁专卖店</a></li>
+                <li><a href="#">耐克</a></li>
+                <li><a href="#">耐克</a></li>
+                <li><a href="#">耐克</a></li>
+                <li><a href="#">耐克</a></li>
+                <li><a href="#">耐克</a></li>
+                <li><a href="#">李宁专卖店</a></li>
+                <li><a href="#">耐克</a></li>
+                <li><a href="#">耐克</a></li>
+                <li><a href="#">耐克</a></li>
+                <li><a href="#">耐克</a></li>
+                <li><a href="#">耐克</a></li>
+                <li><a href="#">李宁专卖店</a></li>
+            </ul>
+            <div class="clearbtn"><input type="button" value="清除历史记录"/></div>
+        </div>
+    </div>
+
+
+
+    <script src="js/zepto.min.js"></script>
+    <script>
+        $(function(){
+            $('.seller-box').on('touchend',function(ev){
+                ev.stopPropagation();
+                $(this).find('ul').show();
+            });
+            $('.seller-box li').on('touchend',function(ev){
+                ev.stopPropagation();
+               $('.seller-box .showtt').text($(this).text());
+                $(this).parent('ul').hide();
+            });
+            $('body').on('tap',function(){
+                $('.seller-box ul').hide();
+            })
+        })
+
+    </script>
+</body>
+</html>
