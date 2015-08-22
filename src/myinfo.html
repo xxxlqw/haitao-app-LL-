@@ -31,7 +31,6 @@
         </div>
     </div>
 </div>
-
 <!--p1 end-->
 <!-- p2 性别选择 begin-->
 <div class="myinfo-p myinfo-p2 " style="display: none" >
@@ -42,6 +41,61 @@
     </ul>
 </div>
 <!-- p2 性别选择 end-->
+
+
+<!--p3 地址管理begin-->
+<div class="myinfo-p myinfo-p3">
+    <div class="header myinfo-header">
+        <a href="#" class="backbtn">&nbsp;</a>
+        <h2>地址管理</h2>
+    </div>
+    <div class="container myinfo-con">
+        <ul class="userlst">
+            <li>
+                <div class="info boxes">
+                    <div class="g-name">张三 136548546289 <i>默认</i></div>
+                    <div class="g-address">
+                        广东省广州市天河区XXXXXX789号天河广场天场天河
+                    </div>
+                    <span class="u-more"></span>
+                </div>
+            </li>
+            <li>
+                <div class="info boxes">
+                    <div class="g-name">张三 136548546289</div>
+                    <div class="g-address">
+                        广东省广州市天河区XXXXXX789号天河广场天场天河
+                    </div>
+                    <span class="u-more"></span>
+                </div>
+            </li>
+            <li>
+                <div class="info boxes">
+                    <div class="g-name">张三 136548546289</div>
+                    <div class="g-address">
+                        广东省广州市天河区XXXXXX789号天河广场天场天河
+                    </div>
+                    <span class="u-more"></span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--p3 end-->
+
+<!-- p4 编辑 begin-->
+<div class="myinfo-p myinfo-p4 " style="display: none" >
+    <ul class="editlst">
+        <li> 设为默认</li>
+        <li> 编辑 </li>
+        <li> 删除 </li>
+    </ul>
+</div>
+<!-- p4 编辑 end-->
+
+<!-- 往上弹的小切片-->
+<div class="alert">该地址已删除</div>
+
 
 <script src="js/zepto.min.js"></script>
 <script>
@@ -56,6 +110,21 @@
         });
         $('.myinfo-p2').on('tap',function(){
             $(this).hide();
+        });
+
+        var _inde = 0;
+        $('.myinfo-p3 .userlst li').on('tap',function(){
+            $('.myinfo-p4').show();
+            _inde = $(this).index();
+        });
+        $('.myinfo-p4 li').on('tap',function(){
+            if($(this).index() == 2){
+                $('.alert').show().addClass('alertswitch');
+                setTimeout(function(){
+                    $('.alert').hide().removeClass('alertswitch');
+                },2000);
+            }
+            $('.myinfo-p4').hide();
         })
     })
 </script>

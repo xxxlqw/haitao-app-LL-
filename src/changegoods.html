@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/modules.css?v=1"/>
+    <script>
+        //设置根节点的大小
+        (function(){var oHtml=document.getElementsByTagName("html")[0];oHtml.style.fontSize=window.innerWidth/8+"px";window.onchange=function(){oHtml.style.fontSize=window.innerWidth/8+"px"};})();
+    </script>
+    <title></title>
+</head>
+<body class="appbody change-body ">
+    <div class="header change-header">
+        <a href="#" class="backbtn">&nbsp;</a>
+        <h2>售后申请</h2>
+        <a href="#" class="link">售后政策</a>
+    </div>
+    <div class="container change-con">
+        <div class="boxes box1">
+            <div class="tt">售后申请</div>
+            <div class="mn f-cb">
+                <div class="img"><img src="images/5.jpg" alt=""/></div>
+                <div class="img"><img src="images/5.jpg" alt=""/></div>
+                <div class="img"><img src="images/5.jpg" alt=""/></div>
+                <div class="img"><img src="images/5.jpg" alt=""/></div>
+            </div>
+        </div>
+        <div class="boxes box2">
+            <div class="tt">售后类型</div>
+            <div class="mn f-cb">
+                <div class="btnbox">
+                    <a href="javascript:void(0);" class="return-btn">退货</a>
+                    <a href="javascript:void(0);" class="change-btn z-sel">换货</a>
+                </div>
+                <div class="hd">问题描述：</div>
+                <textarea placeholder="输入您的换货理由…" class="reason"></textarea>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="footer">
+        <a href="#">提交</a>
+    </div>
+
+    <script src="js/zepto.min.js"></script>
+    <script>
+        $(function(){
+            $('.box2 .btnbox').on('touchend','a',function(){
+                console.log($(this).index());
+                $(this).addClass('z-sel').siblings('a').removeClass('z-sel');
+            })
+
+
+        })
+    </script>
+
+</body>
+</html>

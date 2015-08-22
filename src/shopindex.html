@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/modules.css?v=1"/>
+    <script>
+        //设置根节点的大小
+        (function(){var oHtml=document.getElementsByTagName("html")[0];oHtml.style.fontSize=window.innerWidth/8+"px";window.onchange=function(){oHtml.style.fontSize=window.innerWidth/8+"px"};})();
+    </script>
+</head>
+<body class="appbody sindex-body ">
+    <div class="header detail-header index-header sindex-header">
+        <a href="#" class="backbtn">&nbsp;</a>
+        <div class="sear-box"><input type="text" placeholder="搜索商品"/></div>
+        <a href="javascript:void(0)" class="more">
+            <span class="round"></span>
+        </a>
+    </div>
+    <div class="container sindex-con">
+        <div class="banner">
+            <img src="images/banner1.jpg" alt=""/>
+        </div>
+        <div class="g-main">
+            <div class="tx">
+                <div class="img"><img src="images/2.jpg" alt=""/></div>
+                <div class="name">爱昵可</div>
+                <div class="star"><span class="fullstar"></span><span class="fullstar"></span><span class="fullstar"></span><span class="halfstar"></span></div>
+                <div class="shopmsg"><span class="hot">人气:65483</span><span class="sc z-sel">收藏</span></div>
+
+                <div class="btn f-cb">
+                    <div class="b1 f-fl">全部商品 <span>656</span></div>
+                    <div class="b2 f-fr">联系商家</div>
+                </div>
+            </div>
+        </div>
+        <div class="banners">
+            <a href="#"><img src="images/banner2.jpg" alt=""/></a>
+            <a href="#"><img src="images/banner2.jpg" alt=""/></a>
+            <a href="#"><img src="images/banner2.jpg" alt=""/></a>
+            <a href="#"><img src="images/banner2.jpg" alt=""/></a>
+            <a href="#"><img src="images/banner2.jpg" alt=""/></a>
+            <a href="#"><img src="images/banner2.jpg" alt=""/></a>
+       </div>
+        <div class="boxes">
+            <div class="g-tt">推荐商品</div>
+            <ul class="product-lst lst f-cb" >
+                <li>
+                    <div class="img"><img src="images/12.jpg" alt=""/></div>
+                    <div class="goods-info">
+                        <div class="name"><div class="text">婴儿奶粉婴儿奶粉婴儿奶粉婴儿奶粉婴儿奶粉</div></div>
+                        <div class="where"><span class="flag"><img src="images/flag.png" alt=""/></span>德国直供 保税仓发货</div>
+                        <div class="price"><span class="new">￥95</span></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="img"><img src="images/12.jpg" alt=""/></div>
+                    <div class="goods-info">
+                        <div class="name"><div class="text">婴儿奶粉婴儿奶粉婴儿奶粉婴儿奶粉婴儿奶粉</div></div>
+                        <div class="where"><span class="flag"><img src="images/flag.png" alt=""/></span>德国直供 保税仓发货</div>
+                        <div class="price"><span class="new">￥95</span></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="img"><img src="images/12.jpg" alt=""/></div>
+                    <div class="goods-info">
+                        <div class="name"><div class="text">婴儿奶粉婴儿奶粉婴儿奶粉婴儿奶粉婴儿奶粉</div></div>
+                        <div class="where"><span class="flag"><img src="images/flag.png" alt=""/></span>德国直供 保税仓发货</div>
+                        <div class="price"><span class="new">￥95</span></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="img"><img src="images/12.jpg" alt=""/></div>
+                    <div class="goods-info">
+                        <div class="name"><div class="text">婴儿奶粉婴儿奶粉婴儿奶粉婴儿奶粉婴儿奶粉</div></div>
+                        <div class="where"><span class="flag"><img src="images/flag.png" alt=""/></span>德国直供 保税仓发货</div>
+                        <div class="price"><span class="new">￥95</span></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="img"><img src="images/12.jpg" alt=""/></div>
+                    <div class="goods-info">
+                        <div class="name"><div class="text">婴儿奶粉婴儿奶粉婴儿奶粉婴儿奶粉婴儿奶粉</div></div>
+                        <div class="where"><span class="flag"><img src="images/flag.png" alt=""/></span>德国直供 保税仓发货</div>
+                        <div class="price"><span class="new">￥95</span></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        
+        
+    </div>
+
+
+
+    <script src="js/zepto.min.js"></script>
+    <script>
+        $(function(){
+            $('.tx .sc').on('tap',function(){
+                $(this).toggleClass('z-sel');
+            })
+        })
+    </script>
+</body>
+</html>

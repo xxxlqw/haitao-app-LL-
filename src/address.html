@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/modules.css?v=1"/>
+    <script>
+        //设置根节点的大小
+        (function(){var oHtml=document.getElementsByTagName("html")[0];oHtml.style.fontSize=window.innerWidth/8+"px";window.onchange=function(){oHtml.style.fontSize=window.innerWidth/8+"px"};})();
+    </script>
+    <title></title>
+</head>
+<body class="appbody address-body">
+    <div class="header address-header">
+        <a href="#" class="backbtn">&nbsp;</a>
+        <h2>新增地址</h2>
+    </div>
+    <div class="container address-con f-cb">
+        <ul class="nav f-fl">
+
+        </ul>
+        <div class="city-con f-fr">
+            <ul class="lst city-lst">
+            </ul>
+        </div>
+    </div>
+
+    <!--省市区数据模拟 area.js-->
+    <script src="js/area.js"></script>
+    <script src="js/zepto.min.js"></script>
+    <script>
+        $(function(){
+            var shtml = city = chtml = '';
+            // 渲染省级
+            for(var i =0;i<area.length;i++){
+                shtml += "<li>" + area[i]['name'] + "</li>";
+            }
+            $('.nav').html(shtml);
+
+            // 渲染市级
+
+            $('.nav').on('tap','li',function(){
+                $(this).addClass('z-sel').siblings('li').removeClass('z-sel');
+                $('.city-lst').html('');
+                city = area[$(this).index()];
+                for(var i = 0; i < city['sub'].length; i++){
+
+                    $('.city-lst').append($("<li>" + city['sub'][i]['name'] + "</li>"));
+                }
+            });
+
+            //渲染县级
+            $('.city-lst').on('tap','li',function(){
+                if($(this).hasClass('sub')){
+                    return false;
+                }
+                chtml = '';
+                $('.city-lst').find('li.sub').remove();
+                $(this).addClass('z-sel').siblings('li').removeClass('z-sel');
+                $(this).after('<li class=\'sub\'></li>');
+                var country = city['sub'][$(this).index()];
+                for(var i = 0; i < country['sub'].length; i++){
+
+                    chtml +='<span>' + country['sub'][i]['name'] + '</span>' ;
+                }
+                $('.city-lst .sub').html(chtml);
+            });
+
+            $('.city-lst li.sub span').live('touchend',function(){
+                $(this).addClass('z-sel').siblings('span').removeClass('z-sel');
+            });
+
+
+
+
+
+        })
+    </script>
+
+
+</body>
+</html>

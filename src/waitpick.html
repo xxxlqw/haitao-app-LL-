@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/modules.css?v=1"/>
+    <script>
+        //设置根节点的大小
+        (function(){var oHtml=document.getElementsByTagName("html")[0];oHtml.style.fontSize=window.innerWidth/8+"px";window.onchange=function(){oHtml.style.fontSize=window.innerWidth/8+"px"};})();
+    </script>
+    <title></title>
+</head>
+<body class="waitpick-body appbody">
+
+
+    <div class="header waitpick-header">
+        <a href="#" class="backbtn">&nbsp;</a>
+        <h2>待付款</h2>
+    </div>
+    <div class="container waitpick-con">
+        <div class="g-order">
+            <div class="tt f-cb">
+                <span class="f-fl">店铺B</span>
+                <span class="status f-fr">待提货</span>
+            </div>
+            <div class="mn f-cb">
+                <div class="img"><a href="#"><img src="images/5.jpg" alt=""/></a></div>
+                <div class="img"><a href="#"><img src="images/5.jpg" alt=""/></a></div>
+                <div class="img"><a href="#"><img src="images/5.jpg" alt=""/></a></div>
+            </div>
+            <div class="ft f-cb">
+                <a href="#" class="btn f-fr">提供地址</a>
+                <a href="#" class="btn f-fr">提供货码</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 条形码-->
+   <div class="txm-mask">
+       <span class="closebtn">x</span>
+       <a href="#"><img src="images/txm.jpg" alt=""/></a>
+   </div>
+
+    +
+
+
+    <script src="js/zepto.min.js"></script>
+    <script>
+        $('.waitpick-con .ft .btn').eq(1).on('tap',function(){
+            $('.txm-mask').css('display','table');
+        });
+        $('.closebtn').on('tap',function(){
+            $('.txm-mask').hide();
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/modules.css?v=1"/>
+    <script>
+        //设置根节点的大小
+        (function(){var oHtml=document.getElementsByTagName("html")[0];oHtml.style.fontSize=window.innerWidth/8+"px";window.onchange=function(){oHtml.style.fontSize=window.innerWidth/8+"px"};})();
+    </script>
+    <title></title>
+</head>
+<body class="waitpay-body appbody">
+
+
+    <div class="header waitpay-header">
+        <a href="#" class="backbtn">&nbsp;</a>
+        <h2>待付款</h2>
+    </div>
+    <div class="container waitpay-con">
+        <div class="close-tips">超过48小时未付款订单将被关闭！ <span class="closebtn">x</span></div>
+        <div class="g-order">
+            <div class="tt f-cb">
+                <span class="f-fl">店铺B</span>
+                <span class="status f-fr">待发货</span>
+            </div>
+            <div class="mn f-cb">
+                <div class="img"><a href="#"><img src="images/5.jpg" alt=""/></a></div>
+                <div class="img"><a href="#"><img src="images/5.jpg" alt=""/></a></div>
+                <div class="img"><a href="#"><img src="images/5.jpg" alt=""/></a></div>
+            </div>
+            <div class="ft f-cb">
+                <span class="price f-fl">应付：63.00</span>
+                <span class="left-time f-fr">00:00:00</span>
+                <a href="#" class="btn f-fr">付款</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="js/zepto.min.js"></script>
+
+    <script>
+        $('.closebtn').on('tap',function(){
+            $('.close-tips').hide();
+        })
+
+        //    倒计时
+
+        function countDown(iTime){
+            var res = '';
+            var oneHour = 3600,
+                    oneMin = 60;
+
+
+
+            var iHour = parseInt(iTime/oneHour);
+            iTime %= oneHour;
+
+            var iMin = parseInt(iTime/oneMin);
+
+            var iSec = iTime%oneMin;
+
+            res = iHour +':'+ iMin +':'+ iSec ;
+            if(  iHour<=0 )res =iHour +':'+ iMin +':'+ iSec;
+            if(  iHour<=0 && iMin<=0 )iHour +':'+ iMin +':'+ iSec;
+
+//补零
+            res = res.replace(/(\d+)(\D?)/g, function($0, $1){
+                return $1.length===1 ? ('0'+$0) : $0;
+            });
+            return res;
+        }
+
+        var time = 999;  //设置时间
+
+        $('.left-time').timer = setInterval(function () {
+            if(time<=0){
+                clearInterval($('.left-time').timer);
+            }
+            $('.left-time').text(countDown(time));
+            time--;
+        }, 1000);
+
+
+
+
+    </script>
+
+</body>
+</html>

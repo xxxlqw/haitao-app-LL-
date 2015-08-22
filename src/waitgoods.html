@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/modules.css?v=1"/>
+    <script>
+        //设置根节点的大小
+        (function(){var oHtml=document.getElementsByTagName("html")[0];oHtml.style.fontSize=window.innerWidth/8+"px";window.onchange=function(){oHtml.style.fontSize=window.innerWidth/8+"px"};})();
+    </script>
+    <title></title>
+</head>
+<body class="waitgoods-body appbody">
+
+    <div class="waitgoods-p waitgoods-p1">
+        <div class="header waitpick-header">
+            <a href="#" class="backbtn">&nbsp;</a>
+            <h2>待收货</h2>
+        </div>
+        <div class="container waitgoods-con">
+            <div class="g-order">
+                <div class="tt f-cb">
+                    <span class="f-fl">店铺B</span>
+                    <span class="status f-fr">待提货</span>
+                </div>
+                <div class="mn f-cb">
+                    <div class="img"><a href="#"><img src="images/5.jpg" alt=""/></a></div>
+                    <div class="img"><a href="#"><img src="images/5.jpg" alt=""/></a></div>
+                    <div class="img"><a href="#"><img src="images/5.jpg" alt=""/></a></div>
+                </div>
+                <div class="ft f-cb">
+                    <span class="price f-fl">实付：63.00</span>
+                    <a href="#" class="btn f-fr">物流信息</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="waitgoods-p waitgoods-p2">
+        <div class="header waitpick-header">
+            <a href="#" class="backbtn">&nbsp;</a>
+            <h2>待收货</h2>
+        </div>
+       <div class="container">
+           <div class="kd boxes">
+               <div class="tt"> <div class="img f-fl"><img src="images/st.jpg" alt=""/></div>申通快递</div>
+               <div class="mn">运单编号：465215413</div>
+           </div>
+           <div class="lst schedule-lst">
+               <dl>
+                   <dt>2015-07-08    15:41:54</dt>
+                   <dd>订单信息发货至广州分流集散中心</dd>
+               </dl>
+               <dl>
+                   <dt>2015-07-08    15:41:54</dt>
+                   <dd>订单信息发货至广州分流集散中心</dd>
+               </dl>
+               <dl>
+                   <dt>2015-07-08    15:41:54</dt>
+                   <dd>订单信息发货至广州分流集散中心</dd>
+               </dl>
+               <dl>
+                   <dt>2015-07-08    15:41:54</dt>
+                   <dd>订单信息发货至广州分流集散中心至广州分流集散至广州分流</dd>
+               </dl>
+           </div>
+       </div>
+
+    </div>
+
+
+
+    <!-- 条形码-->
+   <div class="txm-mask">
+       <span class="closebtn">x</span>
+       <a href="#"><img src="images/txm.jpg" alt=""/></a>
+   </div>
+
+    <script src="js/zepto.min.js"></script>
+    <script>
+        $('.waitgoods-con .btn').on('tap',function(){
+            $('.waitgoods-p2').show();
+            $('.waitgoods-p1').hide();
+        })
+    </script>
+
+</body>
+</html>

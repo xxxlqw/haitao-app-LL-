@@ -27,9 +27,9 @@
         }
     </style>
 </head>
-<body class="appbody detail-body">
+<body class="detail-body">
 
-
+    <div class="detail-p detail-p1">
     <div class="header detail-header">
         <a href="#" class="backbtn">&nbsp;</a>
         <h2>商品详情</h2>
@@ -70,7 +70,7 @@
             </div>
         </div>
         <div class="boxes box2  f-cb">
-            <div class="g-tt">收货地址 <span class="f-fr u-more"></span></div>
+            <div class="g-tt">产品参数、详情 <span class="f-fr u-more"></span></div>
         </div>
         <div class="boxes box3  f-cb">
             <div class="g-tt">商品评价</div>
@@ -116,7 +116,6 @@
 
             </div>
 
-        </div>
 
         <div class="boxes box4 f-cb">
            <div class="img f-fl"><img src="images/logo1.jpg" alt=""/></div>
@@ -142,6 +141,53 @@
             购买
         </a>
     </div>
+    </div>
+
+    <div class="detail-p detail-p2">
+
+        <div class="header detail-header">
+            <a href="#" class="backbtn">&nbsp;</a>
+            <h2>参数详情</h2>
+            <a href="javascript:void(0)" class="more">
+                <span class="round"></span>
+            </a>
+
+            <ul class="morelst">
+                <li><a href="#">分享</a></li>
+                <li><a href="#">收藏</a></li>
+                <li><a href="#">首页</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="boxes">
+                <ul class="lst">
+                    <li><span>产地</span>德国</li>
+                    <li><span>净重</span>500KG</li>
+                    <li><span>品牌</span>欧时力</li>
+                </ul>
+            </div>
+            <div class="boxes">
+                <img src="images/img1.jpg" alt=""/>
+            </div>
+            <div class="boxes">
+                <img src="images/img2.jpg" alt=""/>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
     <script src="js/zepto.min.js"></script>
     <script src="js/swipe.js"></script>
@@ -163,7 +209,7 @@
             });
             var bullets = document.getElementById('position').getElementsByTagName('li');
         });
-
+//        头部点点的更多
         $(function(){
             $('.header .more').on('click',function(){
                 $('.morelst').toggle();
@@ -175,7 +221,19 @@
                 $('.morelst').hide();
             })
 
-        })
+        });
+//               //快递邮件
+        $(function(){
+            $('.detail-con .box2 ').on('tap',function(){
+                $('.detail-p1').addClass('pagehide');
+                $('.detail-p2').addClass('pageshow');
+            })
+        });
+
+
+
+
+
 
 
 

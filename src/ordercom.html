@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/modules.css?v=1"/>
+    <script>
+        //设置根节点的大小
+        (function(){var oHtml=document.getElementsByTagName("html")[0];oHtml.style.fontSize=window.innerWidth/8+"px";window.onchange=function(){oHtml.style.fontSize=window.innerWidth/8+"px"};})();
+    </script>
+    <title></title>
+</head>
+<body class="appbody ordercom-body ">
+
+
+    <div class="header ordercom-header">
+        <a href="#" class="backbtn">&nbsp;</a>
+        <h2>订单评价</h2>
+    </div>
+    <div class="container ordercom-con">
+
+        <div class="boxes box1">
+            <div class="tt">商品满意度</div>
+            <div class="g-pro f-cb">
+                <div class="goods-img f-fl"><img src="images/11.jpg" alt=""/></div>
+                <div class="goods-info f-fr">
+                    <div class="name"><div class="text">比力杰勒斯 Billy Jealousy 热毛巾须前护理乳236ml/8oz</div></div>
+                    <div class="value">
+                        <span class="worth">￥75</span>
+                    </div>
+                </div>
+            </div>
+            <div class="assess f-cb">
+                <span class="subtt f-fl">描述相符：</span> <div class="facestar f-fl"><span class="onstar"></span><span class="onstar"></span><span class="onstar"></span><span class="onstar"></span><span class="onstar"></span></div>
+            </div>
+            <div class="txt">
+                <textarea rows="1" placeholder="亲，说说你对宝贝的感受吧！" id="feel"></textarea>
+            </div>
+        </div>
+
+        <div class="boxes box2">
+            <div class="tt">服务满意度</div>
+            <div class="assess f-cb">
+                <span class="subtt f-fl">商家态度：</span> <div class="facestar f-fl"><span class="onstar"></span><span class="onstar"></span><span class="onstar"></span><span class="onstar"></span><span class="onstar"></span></div>
+            </div>
+            <div class="assess f-cb">
+                <span class="subtt f-fl">服务态度：</span> <div class="facestar f-fl"><span class="onstar"></span><span class="onstar"></span><span class="onstar"></span><span class="onstar"></span><span class="onstar"></span></div>
+            </div>
+        </div>
+
+
+        <div class="footer">
+            <a href="#">确定</a>
+        </div>
+
+
+
+    </div>
+    <script src="js/zepto.min.js"></script>
+    <script>
+        $(function(){
+            $('.facestar').each(function(){
+                var _self = $(this);
+                $(this).on('touchend','span',function(){
+                    var ind = $(this).index();
+                    for(var i = 0 ;i<=ind ;i++){
+                        _self.find('span').eq(i).removeClass().addClass('onstar');
+                    };
+                    for(var i = 4;i>ind;i--){
+                        _self.find('span').eq(i).removeClass().addClass('offstar');
+                    }
+                })
+            })
+
+        });
+
+
+        $('#feel').change(function(){
+
+            console.log( $(this).val().indexOf()   );
+        })
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/modules.css?v=1"/>
+    <script>
+        //设置根节点的大小
+        (function(){var oHtml=document.getElementsByTagName("html")[0];oHtml.style.fontSize=window.innerWidth/8+"px";window.onchange=function(){oHtml.style.fontSize=window.innerWidth/8+"px"};})();
+    </script>
+    <title></title>
+</head>
+<body class="address1-body appbody">
+
+    <div class="header myinfo-header">
+        <a href="#" class="backbtn">&nbsp;</a>
+        <h2>地址详情</h2>
+    </div>
+    <div class="container address1-con">
+        <div class="boxes box1  f-cb">
+            <div class="g-tt">广州市天河区 <span class="f-fr u-more"></span></div>
+        </div>
+
+        <div class="boxes box2  f-cb">
+            <div class="g-tt">街道 <input type="text"/></div>
+        </div>
+        <div class="boxes box3  f-cb">
+            <div class="g-tt">详情 <input type="text"/></div>
+        </div>
+        <div class="boxes box4  f-cb">
+            <div class="g-tt">联系人 <input type="text"/></div>
+        </div>
+        <div class="boxes box5  f-cb">
+            <div class="g-tt">电话<input type="tel"/></div>
+        </div>
+    </div>
+    <div class="footer address1-footer">
+        保存
+    </div>
+
+
+    <!-- 街道的对话框-->
+    <div class="dialog-box stree-box">
+        <div class="dialog">
+            <div class="g-tt">街道选择</div>
+            <div class="g-mn">
+                <label>三元街 <input type="checkbox"/></label>
+                <label>三元街 <input type="checkbox"/></label>
+                <label>三元街 <input type="checkbox"/></label>
+                <label>三元街 <input type="checkbox"/></label>
+                <label>三元街 <input type="checkbox"/></label>
+                <label>三元街 <input type="checkbox"/></label>
+                <label>三元街 <input type="checkbox"/></label>
+                <label>三元街 <input type="checkbox"/></label>
+                <label>三元街 <input type="checkbox"/></label>
+                <label>三元街 <input type="checkbox"/></label>
+                <label>三元街 <input type="checkbox"/></label>
+                <label>三元街 <input type="checkbox"/></label>
+                <label>三元街 <input type="checkbox"/></label>
+                <label>三元街 <input type="checkbox"/></label>
+            </div>
+            <div class="btn"><div class="cancel">取消</div><div class="sure">确定</div></div>
+        </div>
+    </div>
+
+
+</div>
+
+    <script src="js/zepto.min.js"></script>
+    <script>
+        $(function(){
+            $('.address1-con .box2').on('tap',function(){
+                $('.stree-box').show();
+
+            });
+            $('.dialog-box .cancel').on('click',function(){
+                $('.dialog-box').hide();
+                return false;
+            });
+        })
+    </script>
+</body>
+</html>
